@@ -6,6 +6,14 @@ return (
 <div className="text-2xl font-bold">
 🇨🇭 SwissDoska
 </div>
+<nav className="hidden md:flex gap-8 text-sm text-neutral-300">
+  <a href="#">Главная</a>
+  <a href="#">Работа</a>
+  <a href="#">Услуги</a>
+  <a href="#">Жильё</a>
+  <a href="#">Компании</a>
+  <a href="#">Контакты</a>
+</nav>
 
 <button className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-black">
 Разместить объявление
@@ -60,6 +68,75 @@ className="rounded-2xl border border-white/10 bg-white/5 p-5 text-lg font-semibo
 ))}
 </div>
 </div>
+</section>
+<section className="mx-auto max-w-6xl px-6 py-16">
+  <h2 className="text-3xl font-bold text-white mb-8">
+    🔥 Новые объявления
+  </h2>
+
+  <div className="grid gap-6 md:grid-cols-3">
+
+    <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
+      <div className="text-red-400 text-sm mb-2">Работа</div>
+      <h3 className="text-xl font-bold text-white">
+        Водитель категории C
+      </h3>
+      <p className="text-neutral-400 mt-2">
+        Лугано • CHF 5800
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
+      <div className="text-red-400 text-sm mb-2">Жильё</div>
+      <h3 className="text-xl font-bold text-white">
+        Квартира 2.5 комнаты
+      </h3>
+      <p className="text-neutral-400 mt-2">
+        Локарно • CHF 1200
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
+      <div className="text-red-400 text-sm mb-2">Услуги</div>
+      <h3 className="text-xl font-bold text-white">
+        Электрик
+      </h3>
+      <p className="text-neutral-400 mt-2">
+        Цюрих • ⭐⭐⭐⭐⭐
+      </p>
+    </div>
+
+  </div>
+  <div className="mt-10 text-center">
+  <button className="rounded-full bg-red-600 px-8 py-4 text-lg font-semibold text-white hover:bg-red-500 transition">
+    Смотреть все объявления →
+  </button>
+</div>
+</section>
+<section className="mx-auto max-w-6xl px-6 py-16">
+  <h2 className="mb-8 text-3xl font-bold text-white">
+    📍 Популярные города
+  </h2>
+
+  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+    {[
+      "Lugano",
+      "Locarno",
+      "Bellinzona",
+      "Zürich",
+      "Geneva",
+      "Bern",
+      "Basel",
+      "Lausanne",
+    ].map((city) => (
+      <div
+        key={city}
+        className="rounded-2xl border border-white/10 bg-white/5 p-5 text-lg font-semibold text-white"
+      >
+        {city}
+      </div>
+    ))}
+  </div>
 </section>
 </main>
 );
